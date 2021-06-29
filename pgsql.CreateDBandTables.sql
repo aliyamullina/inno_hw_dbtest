@@ -4,13 +4,13 @@ DROP TABLE Department, employees, customer, contract, executor;
 
 CREATE TABLE Department (
 	Id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-	Name VARCHAR (255)
+	department_name VARCHAR (255)
 );
 
 CREATE TABLE Employees (
 	id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 	department_id INT,	
-	name VARCHAR (255),
+	employee_name VARCHAR (255),
   	FOREIGN KEY (department_id) REFERENCES Department (Id)
 );
 

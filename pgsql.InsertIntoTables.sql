@@ -1,7 +1,7 @@
-INSERT INTO department (Name)
+INSERT INTO department (department_name)
 VALUES ('Manufacturing'), ('Logistic'), ('Sales'), ('Economy'), ('Production');
 
-INSERT INTO employees (department_id, name)
+INSERT INTO employees (department_id, employee_name)
 VALUES 
 (1,	'Ivan Ivanov'),
 (1,	'Sidor Sidorov'),
@@ -54,30 +54,30 @@ VALUES
 (9,	'2018-09-12',	160000),
 (3,	'2019-10-14',	170000);
 
-INSERT INTO executor (tab_no)
+INSERT INTO executor (tab_no, contract_id)
 VALUES 
-(1),
-(2),
-(3),
-(4),
-(5),
-(7),
-(2),
-(3),
-(5),
-(6),
-(7),
-(9),
-(10),
-(1),
-(2),
-(5),
-(2),
-(3),
-(7),
-(8),
-(5),
-(4),
-(3),
-(4),
-(5);
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(7, 6),
+(2, 7),
+(3, 8),
+(5, 9),
+(6, 10),
+(7, 11),
+(9, 12),
+(10, 13),
+(1, 14),
+(2, 15),
+(5, 16),
+(2, 17),
+(3, 18),
+(7, 19),
+(8, 20),
+(5, 21),
+(4, 22),
+(3, 23),
+(4, 24),
+(5, 25);
