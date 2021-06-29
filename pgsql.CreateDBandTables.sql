@@ -27,6 +27,6 @@ CREATE TABLE Contract (
 );
 
 CREATE TABLE Executor (
-	tab_no INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  	contract_id INT	
+	tab_no INT,
+  	contract_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY	
 );

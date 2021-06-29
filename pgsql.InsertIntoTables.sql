@@ -54,7 +54,7 @@ VALUES
 (9,	'2018-09-12',	160000),
 (3,	'2019-10-14',	170000);
 
-INSERT INTO executor (contract_id)
+INSERT INTO executor (tab_no)
 VALUES 
 (1),
 (2),
