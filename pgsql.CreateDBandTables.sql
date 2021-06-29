@@ -10,7 +10,8 @@ CREATE TABLE Department (
 CREATE TABLE Employees (
 	id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 	department_id INT,	
-	name VARCHAR (255)
+	name VARCHAR (255),
+  	FOREIGN KEY (department_id) REFERENCES Department (Id)
 );
 
 CREATE TABLE Customer(
@@ -23,10 +24,12 @@ CREATE TABLE Contract (
 	id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   	customer_id INT,
   	date DATE NOT NULL,
-  	amount INT	
+  	amount INT,
+  	FOREIGN KEY (customer_id) REFERENCES Customer (Id)
 );
 
 CREATE TABLE Executor (
 	tab_no INT,
-  	contract_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY	
+  	contract_id INT,
+  	FOREIGN KEY (contract_id) REFERENCES Contract (Id)
 );
