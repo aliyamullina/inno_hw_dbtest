@@ -6,4 +6,5 @@ FROM (
   FROM contract
 ) AS equalCost
 GROUP BY equalCost.amount
+HAVING equalCost.count > 1
 ORDER BY equalCost.count DESC, equalCost.amount DESC
