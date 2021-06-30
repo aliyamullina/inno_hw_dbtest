@@ -1,9 +1,10 @@
 --Найти самую часто встречающуюся локации среди всех заказчиков. 
 --Вывести: location, count
-SELECT MAX(loc_count)
-FROM (
-  SELECT location, COUNT(*) AS loc_count
+--SELECT MAX(frequentLocation.count)
+--FROM (
+  SELECT location, COUNT(*)
   FROM contract, customer
   WHERE contract.customer_id = customer.id
   GROUP BY location
-) AS FrequentLocation
+  ORDER BY count DESC
+--) AS frequentLocation
