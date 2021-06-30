@@ -1,8 +1,9 @@
 --Найти контракты одинаковой стоимости. 
 --Вывести count, amount
---SELECT MAX(loc_count)
---FROM (
+SELECT COUNT(amount), amount
+FROM (
   SELECT id, amount
   FROM contract
-  --GROUP BY amount
---) AS FrequentLocation
+) AS T
+GROUP BY amount
+ORDER BY count, amount
