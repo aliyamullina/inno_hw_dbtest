@@ -1,4 +1,4 @@
-DROP TABLE Department, employees, customer, contract, executor;
+--DROP TABLE Department, employees, customer, contract, executor;
 
 --CREATE DATABASE test_data;
 
@@ -10,7 +10,7 @@ CREATE TABLE Department (
 CREATE TABLE Employees (
 	id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 	department_id INT,	
-	employee_name VARCHAR (255),
+	name VARCHAR (255),
   	FOREIGN KEY (department_id) REFERENCES Department (Id)
 );
 

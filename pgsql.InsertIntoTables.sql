@@ -1,7 +1,7 @@
 INSERT INTO department (department_name)
 VALUES ('Manufacturing'), ('Logistic'), ('Sales'), ('Economy'), ('Production');
 
-INSERT INTO employees (department_id, employee_name)
+INSERT INTO employees (department_id, name)
 VALUES 
 (1,	'Ivan Ivanov'),
 (1,	'Sidor Sidorov'),
