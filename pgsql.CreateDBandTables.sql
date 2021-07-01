@@ -1,4 +1,4 @@
-DROP TABLE Department, employees, customer, contract, executor;
+--DROP TABLE Department, employees, customer, contract, executor;
 
 --CREATE DATABASE test_data;
 
