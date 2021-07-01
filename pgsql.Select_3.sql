@@ -1,24 +1,18 @@
 --Найти самую часто встречающуюся локации среди всех заказчиков. 
 --Вывести: location, count
---SELECT max(maxLocation.count), location
---FROM (
-  SELECT location, COUNT(*) as myCount
-  FROM customer
-  GROUP BY location
---) AS maxLocation
+SELECT location, localCount as Count
+FROM (
+  	SELECT location, COUNT(*) as localCount
+ 	FROM customer
+  	GROUP BY location
+) as t_1
+JOIN (
+  SELECT MAX(localCount) AS localMax
+  FROM (
+    SELECT location, COUNT(*) as localCount
+  	FROM customer
+  	GROUP BY location
+  ) AS t_1_1
+) AS t_2
+ON t_1.localCount = t_2.localMax
 
-select referee, OnlyMyCount
-  from (
-         select referee, count(1) as OnlyMyCount
-           from matches
-          group by referee
-       ) v_1
-  join (
-         select max(OnlyMyCount) as max_OnlyMyCount
-           from (
-                  select referee, count(1) as OnlyMyCount
-                    from matches
-                   group by referee
-                ) v_0
-       ) v_2
-    on v_1.OnlyMyCount = v_2.max_OnlyMyCount
